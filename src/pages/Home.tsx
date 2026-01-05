@@ -1,5 +1,7 @@
+import { getSponsors } from '@/api/localStore';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+import { useQuery } from '@tanstack/react-query';
 import { motion } from 'framer-motion';
 import {
   Building2,
@@ -41,89 +43,6 @@ const images = {
     'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/user_695405b194ce4c263b77133d/e7ad6995d_image.png',
 };
 
-const sponsors = [
-  {
-    src: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695407e788e62ca1c15313af/3aa10a22f_WhatsAppImage2025-12-30at135028.jpeg',
-    alt: 'Pastel Mineiro',
-  },
-  {
-    src: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695407e788e62ca1c15313af/03b5572e3_WhatsAppImage2025-12-30at1350291.jpg',
-    alt: 'Carvão Joinha',
-  },
-  {
-    src: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695407e788e62ca1c15313af/2834e5403_WhatsAppImage2025-12-30at135030.jpg',
-    alt: 'Faria - Farinha de Milho',
-  },
-  {
-    src: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695407e788e62ca1c15313af/d4f65df02_WhatsAppImage2025-12-30at1350311.jpg',
-    alt: 'Faria - Apimentada',
-  },
-  {
-    src: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695407e788e62ca1c15313af/a8658df64_WhatsAppImage2025-12-30at135031.jpg',
-    alt: 'Faria - Apimentada 2',
-  },
-  {
-    src: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695407e788e62ca1c15313af/8aa536db7_WhatsAppImage2025-12-30at1350321.jpg',
-    alt: 'Faria - Tradicional',
-  },
-  {
-    src: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695407e788e62ca1c15313af/8c106e35d_WhatsAppImage2025-12-30at135032.jpg',
-    alt: 'Fubá Faria',
-  },
-  {
-    src: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695407e788e62ca1c15313af/34ef586d6_WhatsAppImage2025-12-30at135051.jpeg',
-    alt: 'Doce de Leite Carapuça',
-  },
-  {
-    src: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695407e788e62ca1c15313af/b29520d3e_WhatsAppImage2025-12-30at135132.jpg',
-    alt: 'Tesouro de Minas',
-  },
-  {
-    src: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695407e788e62ca1c15313af/b3dd4eb2b_WhatsAppImage2025-12-30at135238.jpeg',
-    alt: 'Panificadora Modelo',
-  },
-  {
-    src: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695407e788e62ca1c15313af/53b6bf028_GPM2.png',
-    alt: 'Grupo Pedro Matos',
-  },
-  {
-    src: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695407e788e62ca1c15313af/01c850a4a_NOVAMARCASOFTCOM_HORIZONTALpdf.png',
-    alt: 'Softcom',
-  },
-  {
-    src: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695407e788e62ca1c15313af/07ecf4795_novolar.png',
-    alt: 'Novolar',
-  },
-  {
-    src: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695407e788e62ca1c15313af/66aa6bfbd_WhatsAppImage2026-01-02at0947361.jpg',
-    alt: 'IFG',
-  },
-  {
-    src: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695407e788e62ca1c15313af/d57480afd_WhatsAppImage2026-01-02at094736.jpeg',
-    alt: 'Gelo Ali',
-  },
-  {
-    src: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695407e788e62ca1c15313af/81d2fb2ad_WhatsAppImage2026-01-02at0947371.jpeg',
-    alt: 'Deixa Comigo Express',
-  },
-  {
-    src: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695407e788e62ca1c15313af/1515aae84_pastoral.png',
-    alt: 'Pastoral Familiar',
-  },
-  {
-    src: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695407e788e62ca1c15313af/743dd0110_WhatsAppImage2026-01-02at094737.jpeg',
-    alt: 'Pulo da Alegria',
-  },
-  {
-    src: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695407e788e62ca1c15313af/99b40c051_WhatsAppImage2026-01-02at102431.jpg',
-    alt: 'Flash Mídia',
-  },
-  {
-    src: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695407e788e62ca1c15313af/d24fe7978_povilho.png',
-    alt: 'Polvilho Azedo 3 Irmãos',
-  },
-];
-
 const fadeInUp = {
   initial: { opacity: 0, y: 60 },
   animate: { opacity: 1, y: 0 },
@@ -139,6 +58,14 @@ const stagger = {
 };
 
 export default function Home() {
+  const { data: sponsors = [] } = useQuery({
+    queryKey: ['sponsors'],
+    queryFn: getSponsors,
+    initialData: [],
+  });
+
+  const activeSponsors = sponsors.filter((sponsor) => sponsor.status);
+
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-white overflow-x-hidden">
       {/* Hero Section */}
@@ -703,22 +630,28 @@ export default function Home() {
             </p>
 
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-              {sponsors.map((sponsor, index) => (
-                <motion.div
-                  key={index}
-                  className="bg-white rounded-2xl p-4 flex items-center justify-center hover:scale-105 transition-transform duration-300 shadow-lg"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.05 }}
-                >
-                  <img
-                    src={sponsor.src}
-                    alt={sponsor.alt}
-                    className="w-full h-32 object-contain"
-                  />
-                </motion.div>
-              ))}
+              {activeSponsors.length > 0 ? (
+                activeSponsors.map((sponsor, index) => (
+                  <motion.div
+                    key={sponsor.id}
+                    className="bg-white rounded-2xl p-4 flex items-center justify-center hover:scale-105 transition-transform duration-300 shadow-lg"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.05 }}
+                  >
+                    <img
+                      src={sponsor.image}
+                      alt={sponsor.name}
+                      className="w-full h-32 object-contain"
+                    />
+                  </motion.div>
+                ))
+              ) : (
+                <p className="text-gray-400 col-span-full text-center">
+                  Nenhum patrocinador cadastrado
+                </p>
+              )}
             </div>
 
             <div className="text-center mt-12">
@@ -844,3 +777,4 @@ export default function Home() {
     </div>
   );
 }
+

@@ -1,0 +1,162 @@
+[
+  {
+    "id": "sponsor-1",
+    "name": "Pastel Mineiro",
+    "image": "3aa10a22f_WhatsAppImage2025-12-30at135028.jpeg",
+    "status": true,
+    "createdAt": "2026-01-05T00:00:00.000Z",
+    "updatedAt": "2026-01-05T19:30:17.441Z"
+  },
+  {
+    "id": "sponsor-2",
+    "name": "Carvão Joinha",
+    "image": "03b5572e3_WhatsAppImage2025-12-30at1350291.jpg",
+    "status": true,
+    "createdAt": "2026-01-05T00:00:00.000Z",
+    "updatedAt": "2026-01-05T00:00:00.000Z"
+  },
+  {
+    "id": "sponsor-3",
+    "name": "Faria - Farinha de Milho",
+    "image": "2834e5403_WhatsAppImage2025-12-30at135030.jpg",
+    "status": true,
+    "createdAt": "2026-01-05T00:00:00.000Z",
+    "updatedAt": "2026-01-05T00:00:00.000Z"
+  },
+  {
+    "id": "sponsor-4",
+    "name": "Faria - Apimentada",
+    "image": "d4f65df02_WhatsAppImage2025-12-30at1350311.jpg",
+    "status": true,
+    "createdAt": "2026-01-05T00:00:00.000Z",
+    "updatedAt": "2026-01-05T00:00:00.000Z"
+  },
+  {
+    "id": "sponsor-5",
+    "name": "Faria - Apimentada 2",
+    "image": "a8658df64_WhatsAppImage2025-12-30at135031.jpg",
+    "status": true,
+    "createdAt": "2026-01-05T00:00:00.000Z",
+    "updatedAt": "2026-01-05T00:00:00.000Z"
+  },
+  {
+    "id": "sponsor-6",
+    "name": "Faria - Tradicional",
+    "image": "8aa536db7_WhatsAppImage2025-12-30at1350321.jpg",
+    "status": true,
+    "createdAt": "2026-01-05T00:00:00.000Z",
+    "updatedAt": "2026-01-05T00:00:00.000Z"
+  },
+  {
+    "id": "sponsor-7",
+    "name": "Fubá Faria",
+    "image": "8c106e35d_WhatsAppImage2025-12-30at135032.jpg",
+    "status": true,
+    "createdAt": "2026-01-05T00:00:00.000Z",
+    "updatedAt": "2026-01-05T00:00:00.000Z"
+  },
+  {
+    "id": "sponsor-8",
+    "name": "Doce de Leite Carapuça",
+    "image": "34ef586d6_WhatsAppImage2025-12-30at135051.jpeg",
+    "status": true,
+    "createdAt": "2026-01-05T00:00:00.000Z",
+    "updatedAt": "2026-01-05T00:00:00.000Z"
+  },
+  {
+    "id": "sponsor-9",
+    "name": "Tesouro de Minas",
+    "image": "b29520d3e_WhatsAppImage2025-12-30at135132.jpg",
+    "status": true,
+    "createdAt": "2026-01-05T00:00:00.000Z",
+    "updatedAt": "2026-01-05T00:00:00.000Z"
+  },
+  {
+    "id": "sponsor-10",
+    "name": "Panificadora Modelo",
+    "image": "b3dd4eb2b_WhatsAppImage2025-12-30at135238.jpeg",
+    "status": true,
+    "createdAt": "2026-01-05T00:00:00.000Z",
+    "updatedAt": "2026-01-05T00:00:00.000Z"
+  },
+  {
+    "id": "sponsor-11",
+    "name": "Grupo Pedro Matos",
+    "image": "53b6bf028_GPM2.png",
+    "status": true,
+    "createdAt": "2026-01-05T00:00:00.000Z",
+    "updatedAt": "2026-01-05T00:00:00.000Z"
+  },
+  {
+    "id": "sponsor-12",
+    "name": "Softcom",
+    "image": "01c850a4a_NOVAMARCASOFTCOM_HORIZONTALpdf.png",
+    "status": true,
+    "createdAt": "2026-01-05T00:00:00.000Z",
+    "updatedAt": "2026-01-05T00:00:00.000Z"
+  },
+  {
+    "id": "sponsor-13",
+    "name": "Novolar",
+    "image": "07ecf4795_novolar.png",
+    "status": true,
+    "createdAt": "2026-01-05T00:00:00.000Z",
+    "updatedAt": "2026-01-05T00:00:00.000Z"
+  },
+  {
+    "id": "sponsor-14",
+    "name": "IFG",
+    "image": "66aa6bfbd_WhatsAppImage2026-01-02at0947361.jpg",
+    "status": true,
+    "createdAt": "2026-01-05T00:00:00.000Z",
+    "updatedAt": "2026-01-05T00:00:00.000Z"
+  },
+  {
+    "id": "sponsor-15",
+    "name": "Gelo Ali",
+    "image": "d57480afd_WhatsAppImage2026-01-02at094736.jpeg",
+    "status": true,
+    "createdAt": "2026-01-05T00:00:00.000Z",
+    "updatedAt": "2026-01-05T00:00:00.000Z"
+  },
+  {
+    "id": "sponsor-16",
+    "name": "Deixa Comigo Express",
+    "image": "81d2fb2ad_WhatsAppImage2026-01-02at0947371.jpeg",
+    "status": true,
+    "createdAt": "2026-01-05T00:00:00.000Z",
+    "updatedAt": "2026-01-05T00:00:00.000Z"
+  },
+  {
+    "id": "sponsor-17",
+    "name": "Pastoral Familiar",
+    "image": "1515aae84_pastoral.png",
+    "status": true,
+    "createdAt": "2026-01-05T00:00:00.000Z",
+    "updatedAt": "2026-01-05T00:00:00.000Z"
+  },
+  {
+    "id": "sponsor-18",
+    "name": "Pulo da Alegria",
+    "image": "743dd0110_WhatsAppImage2026-01-02at094737.jpeg",
+    "status": true,
+    "createdAt": "2026-01-05T00:00:00.000Z",
+    "updatedAt": "2026-01-05T00:00:00.000Z"
+  },
+  {
+    "id": "sponsor-19",
+    "name": "Flash Mídia",
+    "image": "99b40c051_WhatsAppImage2026-01-02at102431.jpg",
+    "status": true,
+    "createdAt": "2026-01-05T00:00:00.000Z",
+    "updatedAt": "2026-01-05T00:00:00.000Z"
+  },
+  {
+    "id": "sponsor-20",
+    "name": "Polvilho Azedo 3 Irmãos",
+    "image": "d24fe7978_povilho.png",
+    "status": true,
+    "createdAt": "2026-01-05T00:00:00.000Z",
+    "updatedAt": "2026-01-05T00:00:00.000Z"
+  }
+]

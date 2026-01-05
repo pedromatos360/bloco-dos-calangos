@@ -1,0 +1,10 @@
+[
+  {
+    "id": "admin-1",
+    "name": "Admin",
+    "email": "pedrovictor.net@gmail.com",
+    "passwordHash": "f1fbb1191bd5631c173b98ff6c3766c43eae38f9d106f84292b5f92a888e353d",
+    "createdAt": "2026-01-05T00:00:00.000Z",
+    "updatedAt": "2026-01-05T00:00:00.000Z"
+  }
+]
