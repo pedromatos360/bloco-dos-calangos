@@ -30,23 +30,9 @@ const SPONSOR_STORAGE_KEY = 'bloco-sponsors'
 const ADMIN_STORAGE_KEY = 'bloco-admins'
 const ADMIN_SESSION_KEY = 'bloco-admin-session'
 const ADMIN_SECRET = import.meta.env.VITE_ADMIN_SECRET ?? ''
+const PUBLIC_IMAGE_PREFIX = `${import.meta.env.BASE_URL}img/`
 
 const isBrowser = typeof window !== 'undefined'
-const sponsorImages = import.meta.glob('../assets/img/*', {
-  eager: true,
-  import: 'default',
-})
-const sponsorImageMap = Object.entries(sponsorImages).reduce(
-  (acc, [filePath, url]) => {
-    const fileName = filePath.split('/').pop()
-    if (fileName) {
-      acc[fileName] = String(url)
-    }
-    return acc
-  },
-  {} as Record<string, string>,
-)
-
 const resolveImage = (value: string) => {
   if (!value) {
     return value
@@ -54,11 +40,14 @@ const resolveImage = (value: string) => {
   if (value.startsWith('data:')) {
     return value
   }
-  const fileName = value.split('/').pop()?.split('?')[0] ?? value
   if (value.startsWith('http')) {
-    return sponsorImageMap[fileName] ?? value
+    return value
   }
-  return sponsorImageMap[fileName] ?? `/src/assets/img/${fileName}`
+  const fileName = value.split('/').pop()?.split('?')[0] ?? value
+  const normalized = value.includes('/assets/')
+    ? fileName.replace(/^(.*?)-[A-Za-z0-9_-]{8}(\.[^.]+)$/, '$1$2')
+    : fileName
+  return `${PUBLIC_IMAGE_PREFIX}${normalized}`
 }
 
 const apiFetch = async <T>(input: string, init?: RequestInit) => {

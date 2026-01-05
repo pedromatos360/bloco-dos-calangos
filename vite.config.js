@@ -108,7 +108,7 @@ const sendJson = (res, statusCode, payload) => {
 const createLocalJsonApi = ({ dataDir, adminSecret }) => {
   const sponsorsPath = path.join(dataDir, 'sponsors.json')
   const adminsPath = path.join(dataDir, 'admins.json')
-  const imagesDir = path.join(dataDir, '..', 'assets', 'img')
+  const imagesDir = path.join(process.cwd(), 'public', 'img')
 
   const createId = () =>
     `sp_${Date.now()}_${Math.random().toString(16).slice(2)}`
